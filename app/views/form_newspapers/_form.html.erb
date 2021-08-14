@@ -1,0 +1,32 @@
+<%= form_with(model: form_newspaper) do |form| %>
+  <% if form_newspaper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(form_newspaper.errors.count, "error") %> prohibited this form_newspaper from being saved:</h2>
+
+      <ul>
+        <% form_newspaper.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nickname %>
+    <%= form.text_field :nickname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

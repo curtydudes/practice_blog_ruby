@@ -1,0 +1,2 @@
+class FormNewspaper < ApplicationRecord
+end

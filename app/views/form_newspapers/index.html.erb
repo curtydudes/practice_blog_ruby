@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Form Newspapers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Nickname</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @form_newspapers.each do |form_newspaper| %>
+      <tr>
+        <td><%= form_newspaper.name %></td>
+        <td><%= form_newspaper.nickname %></td>
+        <td><%= form_newspaper.age %></td>
+        <td><%= link_to 'Show', form_newspaper %></td>
+        <td><%= link_to 'Edit', edit_form_newspaper_path(form_newspaper) %></td>
+        <td><%= link_to 'Destroy', form_newspaper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Form Newspaper', new_form_newspaper_path %>

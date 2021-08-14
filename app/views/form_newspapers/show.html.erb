@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @form_newspaper.name %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @form_newspaper.nickname %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @form_newspaper.age %>
+</p>
+
+<%= link_to 'Edit', edit_form_newspaper_path(@form_newspaper) %> |
+<%= link_to 'Back', form_newspapers_path %>
