@@ -1,0 +1,30 @@
+<div class="new_article">
+    <%= link_to "Create New Article", articles_new_path %>
+</div>
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @articles.each do |article| %>
+            <tr>
+                <td> <%= article.id %> </td>
+                <td> <%= article.name %> </td>
+                <td> <%= article.body %> </td>
+            </tr>
+            <tr>
+                <td class = "edit_button"> <%= link_to "Edit", article_edit_path(article.id) %></td>
+                <td class = "delete_button"> <%= link_to "Delete", article_delete_path(article), method: :delete %></td>
+                <td class = "show_button"> <%= link_to "Show", article_show_path(article) %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
